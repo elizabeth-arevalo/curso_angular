@@ -1,0 +1,10 @@
+<div class="container mt-4" *ngIf="movie">
+    <h1>{{ movie.title }}</h1>
+    <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" class="img-fluid" alt="{{ movie.title }}">
+    <p>{{ movie.overview }}</p>
+    <p><strong>Fecha de estreno:</strong> {{ movie.release_date }}</p>
+    <a routerLink=:{} class="btn btn-secondary">Volver</a>
+  </div>
+  
+
+  

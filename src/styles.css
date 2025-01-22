@@ -1,1 +1,163 @@
-/* You can add global styles to this file, and also import other style files */
+/* Definición de variables globales con colores oscuros y dorados */
+:root {
+    --primary-color: #ff9f1c; /* Naranja dorado */
+    --secondary-color: #2a2a2a; /* Negro oscuro */
+    --background-color: #121212; /* Fondo principal */
+    --text-color: #e0e0e0; /* Texto claro */
+    --card-bg-color: #1e1e1e; /* Fondo de las tarjetas */
+    --card-shadow: rgba(255, 159, 28, 0.3);
+    --border-color: #ff9f1c;
+    --hover-color: #ffb347;
+    color-scheme: light dark;
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #121212;
+        --text-color: #e0e0e0;
+        --card-bg-color: #1e1e1e;
+        --card-shadow: rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Contenedor principal con espaciado */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Títulos estilizados */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Botón estilizado con efectos */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+    background-color: var(--primary-color);
+    border: 2px solid var(--border-color);
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+    box-shadow: 0 4px 12px var(--card-shadow);
+    color: var(--secondary-color);
+}
+
+/* Estilos de tarjetas */
+.card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px var(--card-shadow);
+}
+
+/* Estilización de las imágenes */
+.card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--border-color);
+}
+
+/* Contenido de la tarjeta */
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.card-text {
+    font-size: 14px;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Estilos de enlaces */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: var(--hover-color);
+}
+
+/* Estilo para la cuadrícula de películas */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.col-md-3 {
+    flex: 0 0 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+}
+
+@media (max-width: 992px) {
+    .col-md-3 {
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+/* Footer estilizado */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-align: center;
+    border-top: 3px solid var(--border-color);
+}

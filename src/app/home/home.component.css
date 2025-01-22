@@ -1,0 +1,68 @@
+.home-container {
+    padding: 40px;
+  }
+  
+  .welcome-section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .welcome-section h1 {
+    font-size: 3rem;
+    color: #ff5722;
+  }
+  
+  .welcome-section p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .movies-section {
+    margin-top: 60px;
+  }
+  
+  .movies-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .movie-card {
+    width: 22%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .movie-details {
+    padding: 10px;
+  }
+  
+  .movie-details h3 {
+    font-size: 1.2rem;
+    color: #222;
+  }
+  
+  .movie-details p {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  .movie-details .btn {
+    margin-top: 10px;
+  }
+  
