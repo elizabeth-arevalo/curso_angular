@@ -1,0 +1,6 @@
+<div class="carousel-container" [style.height.px]="height">
+    <div class="carousel-scroll">
+      <app-movie-poster *ngFor="let movie of movies" [movie]="movie"></app-movie-poster>
+    </div>
+  </div>
+  

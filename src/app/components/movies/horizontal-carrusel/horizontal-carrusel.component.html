@@ -1,0 +1,8 @@
+<div class="horizontal-carousel" [style.height.px]="title ? 260 : 220">
+    <h2 *ngIf="title" class="carousel-title" [style.color]="color">{{ title }}</h2>
+  
+    <div #carouselContainer class="carousel-container">
+      <app-movie-poster *ngFor="let movie of movies" [movie]="movie" [width]="140" [height]="200"></app-movie-poster>
+    </div>
+  </div>
+  

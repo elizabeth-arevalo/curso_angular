@@ -1,0 +1,10 @@
+.carousel-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+  }
+  .carousel-scroll {
+    display: flex;
+    gap: 10px;
+  }
+  
